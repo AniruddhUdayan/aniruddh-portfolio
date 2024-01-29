@@ -1,18 +1,11 @@
 {
-  "id": "page",
-  "label": "Page",
+  "id": "contacts",
+  "label": "Contacts",
   "format": "page",
   "repeatable": true,
   "status": true,
   "json": {
     "Main": {
-      "title": {
-        "type": "Text",
-        "config": {
-          "label": "Title",
-          "placeholder": ""
-        }
-      },
       "uid": {
         "config": {
           "label": "UID"
@@ -23,26 +16,7 @@
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
-          "choices": {
-            "contact": {
-              "type": "SharedSlice"
-            },
-            "projects": {
-              "type": "SharedSlice"
-            },
-            "education": {
-              "type": "SharedSlice"
-            },
-            "experience": {
-              "type": "SharedSlice"
-            },
-            "tech_list": {
-              "type": "SharedSlice"
-            },
-            "biography": {
-              "type": "SharedSlice"
-            }
-          }
+          "choices": {}
         }
       }
     },

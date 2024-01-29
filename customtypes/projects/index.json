@@ -1,6 +1,6 @@
 {
-  "id": "page",
-  "label": "Page",
+  "id": "projects",
+  "label": "Project",
   "format": "page",
   "repeatable": true,
   "status": true,
@@ -19,27 +19,27 @@
         },
         "type": "UID"
       },
+      "date": {
+        "type": "Date",
+        "config": {
+          "label": "Date",
+          "placeholder": ""
+        }
+      },
+      "hover_image": {
+        "type": "Image",
+        "config": {
+          "label": "Hover image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "contact": {
-              "type": "SharedSlice"
-            },
-            "projects": {
-              "type": "SharedSlice"
-            },
-            "education": {
-              "type": "SharedSlice"
-            },
-            "experience": {
-              "type": "SharedSlice"
-            },
-            "tech_list": {
-              "type": "SharedSlice"
-            },
-            "biography": {
+            "text_block": {
               "type": "SharedSlice"
             }
           }

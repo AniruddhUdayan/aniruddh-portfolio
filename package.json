@@ -10,6 +10,7 @@
     "slicemachine": "start-slicemachine"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.12.1",
     "@prismicio/client": "^7.3.1",
     "@prismicio/next": "^1.5.0",
     "@prismicio/react": "^2.7.3",
@@ -19,6 +20,7 @@
     "clsx": "^2.1.0",
     "framer-motion": "^10.18.0",
     "gsap": "^3.12.4",
+    "math-random": "^2.0.1",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",

@@ -1,0 +1,60 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "means",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"title",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "shake",
+							"type": "Text"
+						}
+					],
+					[
+						"time_period",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "are",
+							"type": "Text"
+						}
+					],
+					[
+						"city",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "barn",
+							"type": "Text"
+						}
+					],
+					[
+						"branch",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "record",
+							"type": "Text"
+						}
+					],
+					[
+						"degree",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "blow",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

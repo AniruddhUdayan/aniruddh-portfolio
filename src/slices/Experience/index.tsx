@@ -30,7 +30,7 @@ const ExperienceCard = ({ experience }: { experience: ExperienceType }) => (
 
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
+        background: "#64748B",
         color: "#fff",
       }}
       visible={true}
@@ -42,7 +42,7 @@ const ExperienceCard = ({ experience }: { experience: ExperienceType }) => (
          <PrismicImage
             field={experience.logo}
             // alt={experience.title}
-            className='w-[60%] h-[60%] object-contain'
+            className='rounded-[50%]'
           />
         </div>
       }
@@ -77,7 +77,10 @@ const Experience = ({ slice }: ExperienceProps): JSX.Element => {
       <Heading as="h2" size="lg">
         {slice.primary.heading ?? ''}
       </Heading>
-
+     <div className="mt-8"> <Heading as="h3" size="sm">
+            <span className="text-slate-500">My Work Experience</span>
+          </Heading>
+</div>
       <div className='mt-20 flex flex-col'>
         <VerticalTimeline >
           {slice.items.map((experience, index) => (

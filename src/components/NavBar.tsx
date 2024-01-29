@@ -8,6 +8,7 @@ import Link from "next/link";
 import { MdMenu, MdClose } from "react-icons/md";
 import Button from "./Button";
 import { usePathname } from "next/navigation";
+import { gsap } from 'gsap';
 
 export default function NavBar({
   settings,
@@ -96,14 +97,31 @@ export default function NavBar({
 }
 
 function NameLogo({ name }: { name: KeyTextField }) {
+ 
+
+
   return (
     <Link
-      href="/"
-      aria-label="Home page"
-      className="text-xl font-extrabold tracking-tighter text-slate-900"
-    >
-      {name}
-    </Link>
+  href="/"
+  aria-label="Home page"
+  className="text-xl font-extrabold tracking-tighter text-slate-900"
+  onMouseEnter={(e) => {
+    gsap.to(e.currentTarget.querySelector("img"), {
+      duration: 0.5,
+      ease: "elastic.out(1, 0.3)",
+      x: -5,
+    });
+  }}
+  onMouseLeave={(e) => {
+    gsap.to(e.currentTarget.querySelector("img"), {
+      duration: 0.5,
+      ease: "elastic.out(1, 0.3)",
+      x: 0, // Return to the original position
+    });
+  }}
+>
+  <img className="relative" width={100} src="/head_logo.svg" alt="Logo" />
+</Link>
   );
 }
 
