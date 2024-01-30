@@ -26,6 +26,7 @@
           "config": {
             "label": "Github Link",
             "placeholder": "",
+            "allowTargetBlank": true,
             "select": null
           }
         },
@@ -34,6 +35,7 @@
           "config": {
             "label": "Website Link",
             "placeholder": "",
+            "allowTargetBlank": true,
             "select": null
           }
         },

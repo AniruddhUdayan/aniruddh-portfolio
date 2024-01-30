@@ -16,7 +16,15 @@ export type TextBlockProps = SliceComponentProps<Content.TextBlockSlice>;
  * Component for "TextBlock" Slices.
  */
 const TextBlock = ({ slice }: TextBlockProps): JSX.Element => {
+  
   const pathname = usePathname();
+  const { website_link, github_link } = slice.primary;
+
+  const hasWebsiteLink = website_link.link_type === 'Web' && website_link;
+  const hasGithubLink = github_link.link_type === 'Web' && github_link;
+
+
+
   return (
     <div className="">
       <div className="flex flex-col sm:flex-row gap-16 sm:gap-2">
@@ -24,52 +32,60 @@ const TextBlock = ({ slice }: TextBlockProps): JSX.Element => {
         <div className="flex flex-col">
           <PrismicRichText field={slice.primary.text} />{" "}
           <div className="flex flex-row gap-4 mt-[20px]">
-            <PrismicNextLink
-              className={clsx(
-                "group relative block overflow-hidden rounded px-3 sm:text-3xl font-bold text-slate-300 hover:text-slate-900"
-              )}
-              field={slice.primary.website_link}
-              // onClick={() => setOpen(false)}
-              aria-current={
-                pathname.includes(asLink(slice.primary.website_link) as string)
-                  ? "page"
-                  : undefined
-              }
-            >
-              <span
+            {hasWebsiteLink && (
+              <PrismicNextLink
                 className={clsx(
-                  "absolute inset-0 z-0 h-full translate-y-12 rounded bg-yellow-300 transition-transform duration-300 ease-in-out group-hover:translate-y-0",
+                  "group relative block overflow-hidden rounded px-3 sm:text-3xl font-bold text-slate-300 hover:text-slate-900"
+                )}
+                field={slice.primary.website_link}
+                // onClick={() => setOpen(false)}
+                aria-current={
                   pathname.includes(
                     asLink(slice.primary.website_link) as string
                   )
-                    ? "translate-y-6"
-                    : "translate-y-18"
-                )}
-              />
-              <span className="relative">Website Link</span>
-            </PrismicNextLink>
-            <PrismicNextLink
-              className={clsx(
-                "group relative block overflow-hidden rounded px-3 sm:text-3xl font-bold text-slate-300 hover:text-slate-900"
-              )}
-              field={slice.primary.github_link}
-              // onClick={() => setOpen(false)}
-              aria-current={
-                pathname.includes(asLink(slice.primary.github_link) as string)
-                  ? "page"
-                  : undefined
-              }
-            >
-              <span
+                    ? "page"
+                    : undefined
+                }
+              >
+                <span
+                  className={clsx(
+                    "absolute inset-0 z-0 h-full translate-y-12 rounded bg-yellow-300 transition-transform duration-300 ease-in-out group-hover:translate-y-0",
+                    pathname.includes(
+                      asLink(slice.primary.website_link) as string
+                    )
+                      ? "translate-y-6"
+                      : "translate-y-18"
+                  )}
+                />
+                <span className="relative">Website Link</span>
+              </PrismicNextLink>
+            )}
+            {hasGithubLink && (
+              <PrismicNextLink
                 className={clsx(
-                  "absolute inset-0 z-0 h-full translate-y-12 rounded bg-yellow-300 transition-transform duration-300 ease-in-out group-hover:translate-y-0",
-                  pathname.includes(asLink(slice.primary.github_link) as string)
-                    ? "translate-y-6"
-                    : "translate-y-18"
+                  "group relative block overflow-hidden rounded px-3 sm:text-3xl font-bold text-slate-300 hover:text-slate-900"
                 )}
-              />
-              <span className="relative">Github Link</span>
-            </PrismicNextLink>
+                field={slice.primary.github_link}
+                // onClick={() => setOpen(false)}
+                aria-current={
+                  pathname.includes(asLink(slice.primary.github_link) as string)
+                    ? "page"
+                    : undefined
+                }
+              >
+                <span
+                  className={clsx(
+                    "absolute inset-0 z-0 h-full translate-y-12 rounded bg-yellow-300 transition-transform duration-300 ease-in-out group-hover:translate-y-0",
+                    pathname.includes(
+                      asLink(slice.primary.github_link) as string
+                    )
+                      ? "translate-y-6"
+                      : "translate-y-18"
+                  )}
+                />
+                <span className="relative">Github Link</span>
+              </PrismicNextLink>
+            )}
           </div>
         </div>
         <Avatar
