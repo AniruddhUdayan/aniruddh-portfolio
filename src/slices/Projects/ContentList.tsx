@@ -153,8 +153,8 @@ export default function ContentList({
               aria-label={post.data.title || ""}
             >
               <div className="flex flex-col">
-                <span className="text-3xl font-bold">{post.data.title}</span>
-                <div className="flex gap-3 text-yellow-400">
+                <span className="text-3xl font-bold max-sm:mb-[10px]">{post.data.title}</span>
+                <div className="flex gap-3 text-yellow-400 flex-wrap">
                   {post.tags.map((tag, index) => (
                     <span key={index} className="text-lg font-bold">
                       {tag}
@@ -162,7 +162,7 @@ export default function ContentList({
                   ))}
                 </div>
               </div>
-              <span className="ml-auto flex items-center gap-2 text-xl font-medium md:ml-0">
+              <span className="ml-auto flex items-center gap-2 text-xl font-medium md:ml-0 max-sm:mt-[10px]">
                 {viewMoreText} <MdArrowOutward />
               </span>
             </a>
