@@ -21,7 +21,7 @@ const Bounded = React.forwardRef<HTMLDivElement, BoundedProps>(
   },
 );
 
-// Set a display name for the component
+
 Bounded.displayName = "Bounded";
 
 export default Bounded;
