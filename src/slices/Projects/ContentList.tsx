@@ -169,7 +169,7 @@ export default function ContentList({
           </li>
         ))}
 
-        {/* Hover element */}
+  
         <div
           className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[320px] w-[220px] rounded-lg bg-cover bg-center opacity-0 transition-[background] duration-300"
           style={{
