@@ -7,14 +7,10 @@ import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import Avatar from "@/components/Avatar";
 
-/**
- * Props for `TextBlock`.
- */
+
 export type TextBlockProps = SliceComponentProps<Content.TextBlockSlice>;
 
-/**
- * Component for "TextBlock" Slices.
- */
+
 const TextBlock = ({ slice }: TextBlockProps): JSX.Element => {
   
   const pathname = usePathname();
