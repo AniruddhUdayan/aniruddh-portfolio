@@ -1,0 +1,68 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "piano",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Ex reprehenderit in do cupidatat consequat culpa ea do labore veniam dolor aute."
+									}
+								}
+							]
+						}
+					],
+					[
+						"company_name",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "automobile",
+							"type": "Text"
+						}
+					],
+					[
+						"designation",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "expression",
+							"type": "Text"
+						}
+					],
+					[
+						"link",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://slicemachine.dev"
+							}
+						}
+					],
+					[
+						"link_name",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "worker",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]
